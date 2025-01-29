@@ -20,38 +20,56 @@
 <!-- You can include any other section that is pertinent to your problem -->
 
 ## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
+- This project aims to develop a Multiple Linear Regression model to forecast shared bike demand within a bike-sharing system. 
+- The project intends to maximize the business plan for a bike-sharing firm and grasp all factors impacting the rental count.
+
+## Data Set Applied
+- This study makes use of a U.S. bike-sharing system's dataset. It covers details on daily bike rentals, the state of the weather, time-related characteristics, and whether today is a working day or a holiday.
+- The primary features consist in:
+Overall rental count (target variable)
+Dates: Year, Month, Weekday, Season
+- Temperatures, humidity, wind speed, weather conditions:
+Working Day, Holiday: Type Indicator Day
+
+
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 ## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
+- Temperature has the highest positive correlation with bike demand. Warmer temperatures result in higher rentals, while extreme weather conditions (heavy rain or snow) decrease demand.
+- Year (trend effect) shows increasing bike rentals over time, indicating growing popularity.
+- Seasonal variations exist: Rentals are highest in summer and fall and lowest in spring.
+- Wind speed and humidity negatively impact demand, with higher wind speed or humidity leading to fewer bike rentals.
+- Weekends and holidays have different rental patterns, but working days still see a significant number of rentals.
+- Feature selection (RFE + VIF) was performed to remove multicollinearity and improve model performance.
+- The final model shows an R-squared value of ~0.81, indicating a strong predictive ability.
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
+- Pandas (v1.3.3) - Data manipulation and analysis
+- NumPy (v1.21.2) - Numerical computing
+- Matplotlib (v3.4.3) - Data visualization
+- Seaborn (v0.11.2) - Statistical data visualization
+- Scikit-learn (v1.0) - Machine learning and preprocessing
+- Statsmodels (v0.13.2) - Statistical modeling and regression analysis
+- Warnings (built-in) - Suppress warnings in output
+
+
 
 <!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+This project is inspired by real-world demand forecasting challenges faced by bike-sharing companies. The dataset is based on a publicly available dataset from bike-sharing systems in the U.S.
+References:
+This project was influenced by machine learning best practices in linear regression.
+Data and problem statement inspired by BoomBikes case study.
+Additional guidance was taken from Scikit-learn and Statsmodels documentation.
 
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
+Created by [@vijaykumar-qait] - feel free to contact me!
 
 
 <!-- Optional -->
