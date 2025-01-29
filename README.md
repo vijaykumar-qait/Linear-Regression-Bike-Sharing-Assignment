@@ -35,14 +35,53 @@ Working Day, Holiday: Type Indicator Day
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
-## Conclusions
-- Temperature has the highest positive correlation with bike demand. Warmer temperatures result in higher rentals, while extreme weather conditions (heavy rain or snow) decrease demand.
-- Year (trend effect) shows increasing bike rentals over time, indicating growing popularity.
-- Seasonal variations exist: Rentals are highest in summer and fall and lowest in spring.
-- Wind speed and humidity negatively impact demand, with higher wind speed or humidity leading to fewer bike rentals.
-- Weekends and holidays have different rental patterns, but working days still see a significant number of rentals.
-- Feature selection (RFE + VIF) was performed to remove multicollinearity and improve model performance.
-- The final model shows an R-squared value of ~0.81, indicating a strong predictive ability.
+## **Key Findings & Conclusions**
+### **1. Temperature Strongly Affects Bike Rentals**  
+- Higher temperatures lead to increased bike demand.  
+- Extreme weather (heavy rain or snow) significantly reduces rentals.  
+
+### **2. Increasing Trend in Bike Rentals Over Time**  
+- The **year-over-year trend** indicates growing adoption of bike-sharing services.  
+- Bike rentals in **2019 were significantly higher than in 2018**, showing increased customer preference.  
+
+### **3. Seasonal Impact on Demand**  
+- **Peak season:** **Summer and fall** have the highest rental counts.  
+- **Low season:** **Spring and winter** show a noticeable drop in demand.  
+- Seasonal variations suggest that biking is **preferred in moderate and warm weather conditions**.  
+
+### **4. Negative Impact of Wind Speed & Humidity**  
+- Higher **humidity** discourages bike rentals, possibly due to discomfort.  
+- Strong **winds** reduce rentals, likely due to difficulty in riding.  
+
+### **5. Weekends & Holidays Show Different Rental Patterns**  
+- **Working days still see significant bike rentals**, indicating heavy usage for **commuting**.  
+- **Weekends & holidays** exhibit different demand patterns, likely due to leisure biking.  
+
+### **6. Feature Selection & Model Optimization**  
+- **Recursive Feature Elimination (RFE) + Variance Inflation Factor (VIF)** were used to remove **multicollinearity** and select the best predictors.  
+- Unnecessary variables like **‘atemp’ (adjusted temperature)** were dropped due to their **high correlation with temperature**.  
+
+### **7. Handling Outliers for Better Model Accuracy**  
+- Extreme values in **temperature, humidity, and wind speed** were **removed using IQR filtering**.  
+- This helped improve model stability and accuracy.  
+
+### **8. Strong Model Performance**  
+- **Train R²:** **0.84** | **Test R²:** **0.83** → The model generalizes well without overfitting.  
+- **Mean Absolute Error (MAE):** **~578**  
+- **Root Mean Squared Error (RMSE):** **~803**  
+- The model has **good predictive power** and captures demand variations effectively.  
+
+### **9. Model Assumption Validations**  
+✅ **Normality of Residuals:** Checked using **Q-Q plots and histograms**. Residuals follow a **normal distribution**.  
+✅ **No Multicollinearity:** Verified using **VIF analysis**, ensuring independent variables do not have strong correlations.  
+✅ **Homoscedasticity Confirmed:** **Residual plots** show no systematic pattern, proving that variance remains constant.  
+
+## **Business Implications**
+🚲 **Optimized Bike Distribution:** Companies can **allocate bikes efficiently** based on predicted demand in different seasons and weather conditions.  
+🚲 **Seasonal Pricing Strategies:** Adjusting **rental pricing** based on peak and low-demand seasons can maximize profits.  
+🚲 **Weather-Based Forecasting:** Integrating **real-time weather data** can improve **demand predictions** and **inventory management**.  
+🚲 **Expansion Opportunities:** The **growing trend in bike rentals** suggests **potential business growth**, encouraging further investment in bike-sharing infrastructure.  
+
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
